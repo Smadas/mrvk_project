@@ -184,7 +184,6 @@ private:
 			 stat.add<mrvk_driver::Mb_status>("main board status",mainBoardStatus);
 			 stat.add<mrvk_driver::Mcb_status>("left motor board status",leftMotorStatus);
 			 stat.add<mrvk_driver::Mcb_status>("right board status",rightMotorStatus);
-			 ROS_ERROR("test koniec");
 			 statusMutex.unlock();
 
 		}else stat.summary(2, "Disconnected");

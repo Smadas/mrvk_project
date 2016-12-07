@@ -51,7 +51,7 @@
    </link>
  
   <joint name="stabilizer_to_imu" type="fixed">
-    <origin xyz="-0.1 0.1 -0.01"/>
+    <origin xyz="0.0 0.0 0.0"/>
     <parent link="base_stabilized"/>
     <child link="imu"/>
   </joint>

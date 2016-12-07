@@ -1,8 +1,9 @@
+<?xml version="1.0"?>
 <launch>
 	<!-- zapina gmapping a vytvori model v rvize s kompletnou konfiguraciou -->	
 	<include file="$(find mrvk_driver)/launch/driver.launch" />
 	<node name="hokuyo_node" pkg="hokuyo_node" type="hokuyo_node" />
-	<include file="$(find adis16350)/launch/adis_driver.launch"/>
+	<!--include file="$(find adis16350)/launch/adis_driver.launch"/-->
 
 	
 	<node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
@@ -21,9 +22,6 @@
 		<param name="base_frame" value="world"/> 
 		<param name="map_frame" value="map"/>
 	</node>
-		
-	<param name="robot_description" command="$(find xacro)/xacro '$(find mrvk_description)/urdf/robot.urdf.xacro' --inorder" />
-	<!--param name="robot_description" textfile="$(find mrvk)/urdf/kv01.urdf" /-->
 	
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
  	 <param name="/use_gui" value="false"/> 
@@ -34,6 +32,6 @@
 	
 	
 	
-	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find mrvk_driver)/rviz/mappping.rviz" required="true"/>
+	<!--node name="rviz" pkg="rviz" type="rviz" args="-d $(find mrvk_driver)/rviz/mappping.rviz" required="true"/-->
 	
 </launch>
