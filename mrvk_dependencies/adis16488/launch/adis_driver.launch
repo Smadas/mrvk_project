@@ -1,0 +1,7 @@
+<launch>
+<!--tento launch file sa bude spustat priamo na robotovi-->
+
+	<rosparam command="load" file="$(find adis16488)/config/adis_parameters.yaml" />
+	<node name="adis16488" pkg="adis16488" type="adis16488_node" ns="adis16488"/>
+		
+</launch>
